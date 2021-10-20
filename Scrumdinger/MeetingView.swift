@@ -1,32 +1,24 @@
-//
-//  ContentView.swift
-//  Scrumdinger
-//
-//  Created by Vince Zipparro on 10/20/21.
-//
-
 import SwiftUI
 
 struct MeetingView: View {
     var body: some View {
-        
-        VStack{
+        VStack {
             ProgressView(value: 5, total: 15)
-            HStack{
-                VStack{
-                    Text("Seconds Elapsed")
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("Seconds Elapsed").font(.caption)
                     Label("300", systemImage: "hourglass.bottomhalf.fill")
                 }
-                VStack{
-                    Text("Seconds Remaining")
+                
+                Spacer()
+                
+                VStack(alignment: .trailing) {
+                    Text("Seconds Remaining").font(.caption)
                     Label("600", systemImage: "hourglass.tophalf.fill")
                 }
             }
         }
-        
     }
-    
-    
 }
 
 struct MeetingView_Previews: PreviewProvider {
