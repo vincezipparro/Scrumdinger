@@ -9,9 +9,14 @@ import SwiftUI
 
 struct MeetingView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack{
+            Color.black
+                .ignoresSafeArea()
+            ProgressView(value: 5, total: 15)
+        }
     }
+    
+    
 }
 
 struct MeetingView_Previews: PreviewProvider {
