@@ -19,6 +19,9 @@ struct MeetingView: View {
                     Label("600", systemImage: "hourglass.tophalf.fill")
                 }
             }
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel(Text("Time Remaining"))
+            .accessibilityValue(Text("10 Minutes"))
             
             Circle()
                 .strokeBorder(lineWidth: 24, antialiased: true)
@@ -30,6 +33,7 @@ struct MeetingView: View {
                     Image(systemName: "forward.fill")
                 }
             }
+            .accessibilityLabel(Text("Next speaker"))
         }
         .padding()
     }
