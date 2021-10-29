@@ -17,20 +17,22 @@ struct DetailView: View {
                     .accessibilityLabel(Text("Start"))
                     .font(.headline)
                     .foregroundColor(.accentColor)
+                
+                HStack{
+                    Label("Length", systemImage: "clock")
+                        .accessibilityLabel(Text("Meeting Length"))
+                    Spacer()
+                    Text("\(scrum.lengthInMinutes) minutes")
+                }
+                
+                HStack{
+                    Label("Color", systemImage: "paintpalette")
+                    Spacer()
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundColor(scrum.color)
+                }
+                .accessibilityElement(children: .ignore)
             }
-            HStack{
-                Label("Length", systemImage: "clock")
-                    .accessibilityLabel(Text("Meeting Length"))
-                Spacer()
-                Text("\(scrum.lengthInMinutes) minutes")
-            }
-            HStack{
-                Label("Color", systemImage: "paintpalette")
-                Spacer()
-                Image(systemName: "checkmark.circle.fill")
-                    .foregroundColor(scrum.color)
-            }
-            .accessibilityElement(children: .ignore)
         }
         .listStyle(InsetListStyle())
     }
