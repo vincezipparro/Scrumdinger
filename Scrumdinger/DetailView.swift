@@ -13,10 +13,12 @@ struct DetailView: View {
     var body: some View {
         List{
             Section(header: Text("Meeting Info")){
-                Label("Start Meeting", systemImage: "timer")
-                    .accessibilityLabel(Text("Start"))
-                    .font(.headline)
-                    .foregroundColor(.accentColor)
+                NavigationLink(destination: MeetingView()){
+                    Label("Start Meeting", systemImage: "timer")
+                        .accessibilityLabel(Text("Start"))
+                        .font(.headline)
+                        .foregroundColor(.accentColor)
+                }
                 
                 HStack{
                     Label("Length", systemImage: "clock")
@@ -33,8 +35,17 @@ struct DetailView: View {
                 }
                 .accessibilityElement(children: .ignore)
             }
+            
+            Section(header: Text("Attendees")) {
+                ForEach(scrum.attendees, id: \.self) { attendee in
+                    Label("\(attendee)", systemImage: "person")
+                        .accessibilityLabel(Text("Person"))
+                        .accessibilityValue(Text(attendee))
+                }
+            }
         }
         .listStyle(InsetListStyle())
+        .navigationTitle("\(scrum.title)")
     }
 }
 
@@ -45,3 +56,4 @@ struct DetailView_Previews: PreviewProvider {
         }
     }
 }
+
