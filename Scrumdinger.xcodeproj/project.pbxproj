@@ -18,6 +18,7 @@
 		0A5B74702720BECB000D96B8 /* DailyScrumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5B746F2720BECB000D96B8 /* DailyScrumModel.swift */; };
 		0A5B74722720C06A000D96B8 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5B74712720C06A000D96B8 /* CardView.swift */; };
 		0A5B74792720D29D000D96B8 /* Color+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5B74782720D29D000D96B8 /* Color+Codable.swift */; };
+		0A5E02DB2735F91100E4A50D /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5E02DA2735F91100E4A50D /* EditView.swift */; };
 		0A9C3C052722336800AB58F8 /* ScrumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9C3C042722336800AB58F8 /* ScrumsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		0A5B746F2720BECB000D96B8 /* DailyScrumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScrumModel.swift; sourceTree = "<group>"; };
 		0A5B74712720C06A000D96B8 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0A5B74782720D29D000D96B8 /* Color+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Codable.swift"; sourceTree = "<group>"; };
+		0A5E02DA2735F91100E4A50D /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		0A9C3C042722336800AB58F8 /* ScrumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +114,7 @@
 				0A5B74712720C06A000D96B8 /* CardView.swift */,
 				0A3FAB332720A99F00D9C2B0 /* Assets.xcassets */,
 				0A3FAB352720A99F00D9C2B0 /* Preview Content */,
+				0A5E02DA2735F91100E4A50D /* EditView.swift */,
 			);
 			path = Scrumdinger;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			files = (
 				0A3FAB322720A99E00D9C2B0 /* MeetingView.swift in Sources */,
 				0A9C3C052722336800AB58F8 /* ScrumsView.swift in Sources */,
+				0A5E02DB2735F91100E4A50D /* EditView.swift in Sources */,
 				0A5B74702720BECB000D96B8 /* DailyScrumModel.swift in Sources */,
 				0A3F19A2272C9F9700DAEB78 /* DetailView.swift in Sources */,
 				0A5B74722720C06A000D96B8 /* CardView.swift in Sources */,
