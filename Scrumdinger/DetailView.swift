@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct DetailView: View {
-    let scrum: DailyScrumModel
+    @Binding var scrum: DailyScrumModel
     @State private var isPresented = false
+    @State private var data: DailyScrumModel.Data = DailyScrumModel.Data()
     
     var body: some View {
         List{
@@ -48,18 +49,19 @@ struct DetailView: View {
         .listStyle(InsetListStyle())
         .navigationBarItems(trailing: Button("Edit"){
             isPresented = true
+            data = scrum.data
         })
         .navigationTitle("\(scrum.title)")
         .fullScreenCover(isPresented: $isPresented){
             NavigationView{
-                EditView()
+                EditView(scrumData: $data)
                     .navigationTitle(scrum.title)
                     .navigationBarItems(leading: Button("Cancel"){
                             isPresented = false
                     }, trailing: Button("Done"){
                         isPresented = false
-                    }
-                )
+                        scrum.update(from: data)
+                    })
             }
         }
     }
@@ -68,7 +70,7 @@ struct DetailView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
-            DetailView(scrum: DailyScrumModel.data[0])
+            DetailView(scrum: .constant(DailyScrumModel.data[0]))
         }
     }
 }
